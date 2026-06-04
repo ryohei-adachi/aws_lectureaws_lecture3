@@ -45,7 +45,8 @@
       
 <br><br><br>
 
-<img src="https://github.com/ryohei-adachi/aws_lecture/assets/75190594/05e292b4-55e6-48bd-addd-05e5a4ee682a" width="70%" />
+<img src="https://github.com/user-attachments/assets/4317984c-63db-48af-830e-0aa34528a768" width="70%" />
+
 
 <br><br>
 

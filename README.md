@@ -106,7 +106,30 @@ EOF
 
 ※169.254.169.254は、自身のEC2インスタスの情報を取得できる専用IPアドレス
 <br>
-※「http://169.254.169.254/latest/meta-data/instance-id」にアクセスし、EC2情報を取得して、ドキュメントルートに記載している
+※「169.254.169.254/latest/meta-data/instance-id」にアクセスし、EC2情報を取得して、ドキュメントルートに記載している
+
+<br><br>
+
+ここまでの設定が完了すれば、「インスタンスを起動」ボタンを押す
+
+<br>
+
+<img src="https://github.com/user-attachments/assets/4ffe9a4b-f6d2-4e47-8a12-aaf8d01cfbc0" width="70%" />
+
+<br>
+<img src="https://github.com/user-attachments/assets/6fc55fa8-5c54-4cf3-9522-9d1cfd79a3a0" width="70%" />
+
+<br>
+<img src="https://github.com/user-attachments/assets/8759579f-804f-44b8-96c3-1e9e9f275465" width="70%" />
+
+<br><br>
+
+インスタンスの一覧を開き、作成したインスタンス(実行中の状態)が存在すればOKです
+
+<br>
+<img src="https://github.com/user-attachments/assets/58dabfa6-ec13-46b3-83f4-08ad68d65502" width="70%" />
+
+
 
 
 

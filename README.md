@@ -36,7 +36,7 @@
 + 「Launch an instance」では下記の内容を入力・選択する
   + 名前: 好きなサーバ名を入力してください
   + Amazon マシンイメージ (AMI): Amazon Linux 2023
-  + インスタンスタイプ: t2.micro
+  + インスタンスタイプ: t3.micro
   + ネットワークの設定: パブリックIPの自動割り当てを「無効」から「有効」に変えてください
   + キーペア (ログイン) : 新しいキーペアの作成をクリックして、キーペアを取得してください(ログイン時に使用)
     +  キーペア名: 好きな名前を入力してください
@@ -54,7 +54,8 @@
 
 <br><br>
 
-<img src="https://github.com/ryohei-adachi/aws_lecture/assets/75190594/ecc10718-aa70-4d39-b9fa-bd925ce0855b" width="70%" />
+<img src="https://github.com/user-attachments/assets/92f77a14-411b-4627-921e-a75e4fea3d97" width="70%" />
+
 
 <br><br>
 
@@ -62,7 +63,7 @@
 
 <br><br>
 
-<img src="https://github.com/ryohei-adachi/aws_lecture/assets/75190594/fa4d93e0-3cdd-4857-861f-9e032e38ca76" width="70%" />
+<img src="https://github.com/user-attachments/assets/e7fe97c6-f4d1-48ff-bec4-50f14571c795" width="70%" />
 
 <br><br>
 
@@ -79,4 +80,32 @@
 <br><br>
 <br>
 
-高度な詳細のタブを開き、
+さらに、下部にある高度な詳細のタブを開きます。
+
+<br><br>
+
+<img src="https://github.com/user-attachments/assets/912e3ea8-65fa-4cc1-a969-15208e556517" width="70%" />
+
+<br><br>
+
+「ユーザーデータ - オプション」下記の記載を入れます。
+
+```
+INSTANCE_ID=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)
+
+cat << EOF > /usr/share/nginx/html/index.html
+<h1>Auto Scaling Demo</h1>
+<p>Hostname : ${HOSTNAME}</p>
+<p>Instance ID : ${INSTANCE_ID}</p>
+EOF
+```
+<br><br>
+<img src="https://github.com/user-attachments/assets/0a258c79-79ba-410d-898c-dda9fb5857ce" width="70%" />
+
+<br>
+
+※169.254.169.254は、自身のEC2インスタスの情報を取得できる専用IPアドレス
+※「http://169.254.169.254/latest/meta-data/instance-id」にアクセスし、EC2情報を取得して、ドキュメントルートに記載している
+
+
+

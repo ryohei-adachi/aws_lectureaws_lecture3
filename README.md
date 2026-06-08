@@ -1,4 +1,4 @@
-# ① EC2インスタンスの構築
+<img width="2876" height="1460" alt="image" src="https://github.com/user-attachments/assets/85bdcc7e-d7ba-472a-8735-50de3edcc55b" /># ① EC2インスタンスの構築
 
 + AWSにログインしてください。
 
@@ -129,6 +129,89 @@ EOF
 <br>
 <img src="https://github.com/user-attachments/assets/58dabfa6-ec13-46b3-83f4-08ad68d65502" width="70%" />
 
+# ② サブネットワークの構築
+
+<br><br>
+ELBでリクエスト通信を振り分けるには、2つ以上のサブネットワークを用意する必要があります。
+<br>
+そこで、今回の演習用のサブネットワークを2つ構築します。
+<br><br>
+
++ 1つ目のサブネットワーク
+  + 10.0.10.0/24
+<br>
++ 2つ目のサブネットワーク
+  + 10.0.20.0/24
+
+<br><br>
+左上の検索ボックスに「VPC」と入力して、VPCサービスを選択します。
+
+<img src="https://github.com/user-attachments/assets/fe4e9cc5-adc3-4d40-a3f0-d2db95ba78ef" width="70%" />
+
+<br><br>
+左のサイドメニューから「サブネット」を選択します。
+
+<img src="https://github.com/user-attachments/assets/67eeb0b3-908c-4aa9-8509-16f1e591a2cd" width="70%" />
+
+<br><br>
+
+左上の「サブネットを作成」ボタンをクリックします。
+
+<img src="https://github.com/user-attachments/assets/70062765-269c-496c-8c17-54bcfedd0c87" width="70%" />
+
+<br><br>
+
+1つめのサブネットを作成します。
+<br>
+以下の内容を入力・選択してください。
+<br>
++ サブネットID
+  + 初めから存在するVPCを選択 (IPv4 CIDRが10.0.0.0/16となってるやつ)
++ サブネット名
+  + subnet-test-1
++ アベイラビリティーゾーン
+  + アジアパシフィック(東京)/apne1-az4(ap-northeast-1a)
++ IPv4 サブネット CIDR ブロック
+  + 10.0.10.0/24
+<br>
+ここまで入力したら、「サブネットを作成」ボタンを押します。
+
+<br><br>
+
+<img src="https://github.com/user-attachments/assets/cb8c3841-3f84-4948-b9f9-2c6d6a725646" width="70%" />
+<br>
+<img src="https://github.com/user-attachments/assets/e8e50273-1fe5-40fc-af8a-e467f43e6ef6" width="70%" />
+
+
+<br><br>
+<img src="https://github.com/user-attachments/assets/46dc07d6-b601-44d1-8199-08335062e9cd" width="70%" />
+
+<br>
+再度、「サブネットを作成」ボタンをクリックし、2つ目のサブネットを作成します。
+<br>
+<img src="https://github.com/user-attachments/assets/de79f6c4-43a7-40f0-928a-1bb369127a5d" width="70%" />
+
+
+<br>
+以下の内容を入力・選択してください。
+<br>
++ サブネットID
+  + 初めから存在するVPCを選択 (IPv4 CIDRが10.0.0.0/16となってるやつ)
++ サブネット名
+  + subnet-test-2
++ アベイラビリティーゾーン
+  + アジアパシフィック(東京)/apne1-az1(ap-northeast-1c)
++ IPv4 サブネット CIDR ブロック
+  + 10.0.20.0/24
+<br>
+ここまで入力したら、「サブネットを作成」ボタンを押します。
+
+<br><br>
+<img src="https://github.com/user-attachments/assets/1ac89b69-6d6b-4c87-8148-779fdb469f06" width="70%" />
+<br>
+<img src="https://github.com/user-attachments/assets/0d58f6e8-787a-459a-b06e-a82bde392aed" width="70%" />
+<br>
+<img src="https://github.com/user-attachments/assets/d27843fd-e419-4128-952e-b1db838c478d" width="70%" />
 
 
 

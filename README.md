@@ -1,4 +1,4 @@
-<img width="2876" height="1460" alt="image" src="https://github.com/user-attachments/assets/85bdcc7e-d7ba-472a-8735-50de3edcc55b" /># ① EC2インスタンスの構築
+# ① EC2インスタンスの構築
 
 + AWSにログインしてください。
 

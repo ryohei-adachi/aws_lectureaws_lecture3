@@ -91,6 +91,15 @@
 「ユーザーデータ - オプション」下記の記載を入れます。
 
 ```
+#!/bin/bash
+
+dnf update -y
+dnf install nginx -y
+
+systemctl enable nginx
+systemctl start nginx
+
+HOSTNAME=$(hostname)
 INSTANCE_ID=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)
 
 cat << EOF > /usr/share/nginx/html/index.html
